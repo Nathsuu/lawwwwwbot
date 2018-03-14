@@ -120,7 +120,7 @@ bot.on("message", async message => {
   
   if (message.content === prefix + "commande"){
     var help_embed = new Discord.RichEmbed()
-        .setColor('#F30000')
+        .setColor('#ff8888')
         .addField("Commande", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
         .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
         .setFooter("Bot Programmé par Lawzenn")
