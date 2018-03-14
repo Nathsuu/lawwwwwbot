@@ -104,6 +104,18 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
 
+  if (message.content === prefix + "help"){
+      var help_embed = new Discord.RichEmbed()
+          .setColor('#ff8888')
+          .addField("Commande de Respect des règles - ", "  -/commande : Affiche les commandes du bot !\n-/Ban @pseudo SOON *\n-/tempban @pseudo SOON * \n-/kick @pseudo SOON* \n-/mute @pseudo SOON * \n-/tempmute @pseudo SOON *")
+          .addField("Interaction - ", "  -/ping le bot te repond pong !\n-/salut le bot te repond ça va ?")
+          .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
+          .addField("Couleurs - ", "  -Les couleurs disponible pour vous etre attribuer en faisant /couleur (couleur)\n@Red @Cyant @Blue @Violet @Pink @Yellow @Orange @Grey @Black @White")
+          .setFooter("Bot Programmé par Lawzenn")
+      message.channel.sendEmbed(help_embed);
+      //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
+      console.log("Commande Help demandé !");
+    }
 });
 
 bot.login(process.env.BOTLAWZENN_TOKEN);
