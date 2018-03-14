@@ -7,6 +7,9 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let purple = botconfig.purple;
 
+var prefix = ("/");
+
+
 fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
