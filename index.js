@@ -7,8 +7,6 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let purple = botconfig.purple;
 
-var prefix = ("/");
-
 
 fs.readdir("./commands/", (err, files) => {
 
@@ -128,8 +126,8 @@ bot.on("message", async message => {
         .setFooter("Bot Programmé par Lawzenn")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
-    console.log("Commande Ban demandé !");
-  }
+    console.log("Commande demandé !");
+    }
   
 });
 
