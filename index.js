@@ -117,6 +117,17 @@ bot.on("message", async message => {
       console.log("Commande Help demandé !");
     }
   
+  if (message.content === prefix + "commande"){
+    var help_embed = new Discord.RichEmbed()
+        .setColor('#F30000')
+        .addField("Commande", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
+        .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
+        .setFooter("Bot Programmé par Lawzenn")
+    message.channel.sendEmbed(help_embed);
+    //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
+    console.log("Commande Ban demandé !");
+  }
+  
 });
 
 bot.login(process.env.BOTLAWZENN_TOKEN);
