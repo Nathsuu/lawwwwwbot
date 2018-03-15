@@ -4,22 +4,22 @@ module.exports.run = async (bot, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.channel.send("No can do pal!");
     if(args[0] == "help"){
-      message.reply("Usage: !ban <user> <reason>");
+      message.reply("Utilise: /ban <user> <raison>");
       return;
     }
     let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!bUser) return message.channel.send("Can't find user!");
+    if(!bUser) return message.channel.send("Utilise: /ban <user> <raison>");
     let bReason = args.join(" ").slice(22);
-    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
+    if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Cette personne ne peut pas etre kick !");
 
     let banEmbed = new Discord.RichEmbed()
-    .setDescription("~Ban~")
+    .setDescription("Ban")
     .setColor("#bc0000")
-    .addField("Banned User", `${bUser} with ID ${bUser.id}`)
-    .addField("Banned By", `<@${message.author.id}> with ID ${message.author.id}`)
-    .addField("Banned In", message.channel)
-    .addField("Time", message.createdAt)
-    .addField("Reason", bReason);
+    .addField("Utilisateur Bannie", `${bUser} with ID ${bUser.id}`)
+    .addField("Bannie par", `<@${message.author.id}> with ID ${message.author.id}`)
+    .addField("Bannie sur", message.channel)
+    .addField("Temps", message.createdAt)
+    .addField("Raison", bReason);
 
     let incidentchannel = message.guild.channels.find(`name`, "incidents");
     if(!incidentchannel) return message.channel.send("Can't find incidents channel.");
