@@ -127,8 +127,10 @@ bot.on("message", async message => {
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
-    }
+    
+  }
   
+         
 });
 
 bot.login(process.env.BOTLAWZENN_TOKEN);
