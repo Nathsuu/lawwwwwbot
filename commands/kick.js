@@ -4,13 +4,13 @@ module.exports.run = async (bot, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
     if(args[0] == "help"){
-      message.reply("Usage: !kick <user> <reason>");
+      message.reply("Utilise: /kick <user> <raison>");
       return;
     }
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!kUser) return message.channel.send("Can't find user!");
+    if(!kUser) return message.channel.send("Utilise: /kick <user> <raison>");
     let kReason = args.join(" ").slice(22);
-    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
+    if(kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Cette personne ne peut pas etre kick !");
 
     let kickEmbed = new Discord.RichEmbed()
     .setDescription("~Kick~")
@@ -22,8 +22,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Reason", kReason);
 
     let kickChannel = message.guild.channels.find(`name`, "incidents");
-    if(!kickChannel) return message.channel.send("Can't find incidents channel.");
-
+    if(!kickChannel) return message.channel.send("Je ne vois pas le channel incidents");
     message.guild.member(kUser).kick(kReason);
     kickChannel.send(kickEmbed);
 }
