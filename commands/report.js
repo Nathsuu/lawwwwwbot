@@ -7,11 +7,11 @@ const orange = botconfig.orange;
 module.exports.run = async (bot, message, args) => {
 
     if(args[0] == "help"){
-      message.reply("Usage: !report <user> <reason>");
+      message.reply("Utilise: !report <user> <raison>");
       return;
     }
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("Couldn't find user.");
+    if(!rUser) return message.channel.send("Utilise: !report <user> <raison>");
     let rreason = args.join(" ").slice(22);
 
     let reportEmbed = new Discord.RichEmbed()
@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Reason", rreason);
 
     let reportschannel = message.guild.channels.find(`name`, "reports");
-    if(!reportschannel) return message.channel.send("Couldn't find reports channel.");
+    if(!reportschannel) return message.channel.send("Je ne vois pas le channel `reports`");
 
 
     message.delete().catch(O_o=>{});
