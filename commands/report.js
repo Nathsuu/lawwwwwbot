@@ -23,8 +23,8 @@ module.exports.run = async (bot, message, args) => {
     .addField("Le", message.createdAt)
     .addField("Raison", rreason);
 
-    let reportschannel = message.guild.channels.find(`name`, "reports");
-    if(!reportschannel) return message.channel.send("Je ne vois pas le channel `reports`");
+    let reportschannel = message.guild.channels.find(`name`, "plaintes");
+    if(!reportschannel) return message.channel.send("Je ne vois pas le channel `plaintes`");
 
 
     message.delete().catch(O_o=>{});
