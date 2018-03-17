@@ -7,7 +7,7 @@ const orange = botconfig.orange;
 module.exports.run = async (bot, message, args) => {
 
     if(args[0] == "help"){
-      message.reply("Utilise: !report <user> <raison>");
+      message.reply("Utilise: /report <user> <raison>");
       return;
     }
     let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
