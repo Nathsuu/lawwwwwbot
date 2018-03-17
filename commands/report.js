@@ -17,11 +17,11 @@ module.exports.run = async (bot, message, args) => {
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Reports")
     .setColor(orange)
-    .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
-    .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
+    .addField("User Report", `${rUser} with ID: ${rUser.id}`)
+    .addField("Reported par", `${message.author} with ID: ${message.author.id}`)
     .addField("Channel", message.channel)
-    .addField("Time", message.createdAt)
-    .addField("Reason", rreason);
+    .addField("Le", message.createdAt)
+    .addField("Raison", rreason);
 
     let reportschannel = message.guild.channels.find(`name`, "reports");
     if(!reportschannel) return message.channel.send("Je ne vois pas le channel `reports`");
