@@ -130,6 +130,17 @@ bot.on("message", async message => {
     
   }
   
+if (message.content === prefix + "discord"){
+    var help_embed = new Discord.RichEmbed()
+        .setColor('#ff8888')
+        .addField("Discord", "https://discord.gg/jcKySm5")
+        .setFooter("Bot Programmé par Lawzenn")
+    message.channel.sendEmbed(help_embed);
+    //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
+    console.log("Commande demandé !");
+    
+  }
+  
          
 });
 
