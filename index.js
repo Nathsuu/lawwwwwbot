@@ -27,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setPresence({ game: { name: '/help ByLawzenn ©', type: 0} });
+  bot.user.setPresence({ game: { name: '/commande ', type: 0} });
 
 });
 
@@ -107,7 +107,7 @@ bot.on("message", async message => {
   
   if (message.content === prefix + "help"){
       var help_embed = new Discord.RichEmbed()
-          .setColor('#FF5E3A')
+          .setColor('#FFD69D')
           .addField("Commande de Respect des règles - ", "  -/commande : Affiche les commandes du bot !\n-/Ban @pseudo SOON *\n-/tempban @pseudo SOON * \n-/kick @pseudo SOON* \n-/mute @pseudo SOON * \n-/tempmute @pseudo SOON *")
           .addField("Interaction - ", "  -/ping le bot te repond pong !\n-/salut le bot te repond ça va ?")
           .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
@@ -119,7 +119,7 @@ bot.on("message", async message => {
   
   if (message.content === prefix + "commande"){
     var help_embed = new Discord.RichEmbed()
-        .setColor('#ff8888')
+        .setColor('#FFD69D')
         .addField("Commande", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
         .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
         .setFooter("Bot Programmé par Lawzenn")
@@ -131,7 +131,7 @@ bot.on("message", async message => {
   
 if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
-        .setColor('#ff8888')
+        .setColor('#FFD69D')
         .addField("Discord", "https://discord.gg/jcKySm5")
         .setFooter("Bot Programmé par Lawzenn")
     message.channel.sendEmbed(help_embed);
