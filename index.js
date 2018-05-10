@@ -138,7 +138,7 @@ if (message.content === prefix + "discord"){
     console.log("Commande demandé !");
     
   }
-  
+}); 
 // Create an event listener for new guild members
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
@@ -146,7 +146,8 @@ client.on('guildMemberAdd', member => {
   // Do nothing if the channel wasn't found on this server
   if (!channel) return;
   // Send the message, mentioning the member
-  channel.send(**👋 Wow Bienvenue, ${member} le @STAFF est à ton service.**);
+  channel.send(`👋 Wow Bienvenue sur le serveur !, ${member}`);
+
 });
  
 bot.login(process.env.BOTLAWZENN_TOKEN);
