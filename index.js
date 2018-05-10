@@ -139,6 +139,16 @@ if (message.content === prefix + "discord"){
     
   }
   
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'bienvenue');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(**👋 Wow Bienvenue, ${member} le @STAFF est à ton service.**);
+});
+  
          
 });
 
