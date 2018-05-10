@@ -148,8 +148,5 @@ client.on('guildMemberAdd', member => {
   // Send the message, mentioning the member
   channel.send(**👋 Wow Bienvenue, ${member} le @STAFF est à ton service.**);
 });
-  
-         
-});
-
+ 
 bot.login(process.env.BOTLAWZENN_TOKEN);
