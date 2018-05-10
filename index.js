@@ -107,7 +107,7 @@ bot.on("message", async message => {
   if (message.content === prefix + "help"){
       var help_embed = new Discord.RichEmbed()
           .setColor('#FFD69D')
-          .addField("Commande de Respect des règles - ", "  **-/commande : Affiche les commandes du bot !**\n-**/ban ➜ Utilise: /ban <pseudo> <raison>**\n-**/tempban ➜ Utilise: /tempban <pseudo> <raison>** (SOON)\n-**/kick ➜ Utilise: /kick <pseudo> <raison>**\n-**/mute ➜ @pseudo (SOON) **\n-**/tempmute ➜ @pseudo (SOON)**")
+          .addField("💡 Aide: Liste des commandes - ", "  **-/commande : Affiche les commandes du bot !**\n-**/ban ➜ Utilise: /ban <pseudo> <raison>**\n-**/tempban ➜ Utilise: /tempban <pseudo> <raison>** (SOON)\n-**/kick ➜ Utilise: /kick <pseudo> <raison>**\n-**/mute ➜ @pseudo (SOON) **\n-**/tempmute ➜ @pseudo (SOON)**")
           .addField("Interaction - ", "  -/ping le bot te repond pong !\n-/salut le bot te repond ça va ?")
           .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
           .setFooter("Bot Programmé par Lawzenn")
