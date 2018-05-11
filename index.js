@@ -140,5 +140,9 @@ if (message.content === prefix + "discord"){
   }
 }); 
 
- 
+client.on('ready', () =>  {
+  console.log("Je suis connecté !")
+   client.user.setActivity("d!help | © 🌺🍃FroGroZe🍃🌺#6893 | "+ client.guilds.size + " Serveurs, " + client.users.size + "  Utilisateurs", {type: "WATCHING"})
+});
+
 bot.login(process.env.BOTLAWZENN_TOKEN);
