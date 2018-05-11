@@ -23,8 +23,6 @@ fs.readdir("./commands/", (err, files) => {
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
 
-});  
-
 
 
 bot.on("message", async message => {
