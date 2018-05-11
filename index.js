@@ -22,15 +22,10 @@ fs.readdir("./commands/", (err, files) => {
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
-  
-});
 
-client.on('ready', () =>  {
-    console.log("Je suis connecté !")
-     client.user.setActivity("/help | © Nathsuu | "+ client.guilds.size + " Serveurs, " + client.users.size + "  Utilisateurs", {type: "WATCHING"})
-  
+});  
 
-});
+
 
 bot.on("message", async message => {
 
@@ -139,6 +134,14 @@ if (message.content === prefix + "discord"){
     console.log("Commande demandé !");
     
   }
-}); 
+
+  client.on('ready', () =>  {
+    console.log("Je suis connecté !")
+     client.user.setActivity("/help | © Nathsuu | "+ client.guilds.size + " Serveurs, " + client.users.size + "  Utilisateurs", {type: "WATCHING"})
+  
+
+});
+
+});
  
 bot.login(process.env.BOTLAWZENN_TOKEN);
