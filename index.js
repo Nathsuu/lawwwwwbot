@@ -16,14 +16,20 @@ fs.readdir("./commands/", (err, files) => {
     console.log("Couldn't find commands.");
     return;
   }
-});
 
   jsfile.forEach((f, i) =>{
     let props = require(`./commands/${f}`);
     console.log(`${f} loaded!`);
     bot.commands.set(props.help.name, props);
+  });
+});
 
+bot.on("ready", async () => {
 
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+  bot.user.setActivity("/help | Nathsuu", {type: "WATCHING"});
+
+});
 
 bot.on("message", async message => {
 
@@ -132,7 +138,7 @@ if (message.content === prefix + "discord"){
     console.log("Commande demandé !");
     
   }
+}); 
 
-});
  
 bot.login(process.env.BOTLAWZENN_TOKEN);
