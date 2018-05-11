@@ -7,11 +7,6 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let purple = botconfig.purple;
 
-client.on('ready', () =>  {
-  console.log("Je suis connecté !")
-   client.user.setActivity("d!help | © 🌺🍃FroGroZe🍃🌺#6893 | "+ client.guilds.size + " Serveurs, " + client.users.size + "  Utilisateurs", {type: "WATCHING"})
-});
-
 fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
