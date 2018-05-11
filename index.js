@@ -24,10 +24,10 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-bot.on("ready", async () => {
-
-  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("/help | Nathsuu", {type: "WATCHING"});
+client.on('ready', () =>  {
+    console.log("Je suis connecté !")
+     client.user.setActivity("/help | © Nathsuu | "+ client.guilds.size + " Serveurs, " + client.users.size + "  Utilisateurs", {type: "WATCHING"})
+  });
 
 });
 
