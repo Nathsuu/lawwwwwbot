@@ -27,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
 client.on('ready', () =>  {
     console.log("Je suis connecté !")
      client.user.setActivity("/help | © Nathsuu | "+ client.guilds.size + " Serveurs, " + client.users.size + "  Utilisateurs", {type: "WATCHING"})
-  });
+  
 
 });
 
