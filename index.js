@@ -7,6 +7,7 @@ let coins = require("./coins.json");
 let xp = require("./xp.json");
 let purple = botconfig.purple;
 
+
 fs.readdir("./commands/", (err, files) => {
 
   if(err) console.log(err);
@@ -105,11 +106,11 @@ bot.on("message", async message => {
   
   if (message.content === prefix + "help"){
       var help_embed = new Discord.RichEmbed()
-          .setColor('#FFD69D')
-          .addField("💡 Aide: Liste des commandes - ", "  **-/commande : Affiche les commandes du bot !**\n-**/ban ➜ Utilise: /ban <pseudo> <raison>**\n-**/tempban ➜ Utilise: /tempban <pseudo> <raison>** (SOON)\n-**/kick ➜ Utilise: /kick <pseudo> <raison>**\n-**/mute ➜ @pseudo (SOON) **\n-**/tempmute ➜ @pseudo (SOON)**")
-          .addField("Interaction - ", "  -/ping le bot te repond pong !\n-/salut le bot te repond ça va ?")
+          .setColor('#00aeff')
+          .addField("💡 Aide: **Liste des commandes** -")
+          .addField("**🔨 Voici les commandes pour les administrateur :** - ", "  -/ban Utilise : /ban <pseudo> \n Cette commande permet de bannir n'importe quels membres.\n/kick Utilise : /kick <pseudo> Cette commande permet d'exclure un memebre sans le bannir.\n/warn Utilise: /warn <pseudo> Cette commande permet d'avertir un membre au bout de 2 warns il seras kick et au bout de 3 warns il sera bannie.\n/say Utilise: /say <message> Cette commande permet de dire ce que tu souhaite mais le bot le feras a ta place !\n/mute Utilise: /mute <pseudo> Commande :🔜")
           .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
-          .setFooter("Bot Programmé par Nathsuu")
+          .setFooter("Bot Programmé par Nathsuu ✔️")
       message.channel.sendEmbed(help_embed);
       //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
       console.log("Commande Help demandé !");
@@ -120,7 +121,7 @@ bot.on("message", async message => {
         .setColor('#FFD69D')
         .addField("Commande Staff", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
         .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
-        .setFooter("Bot Programmé par Nathsuu")
+        .setFooter("Bot Programmé par Nathsuu.")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
@@ -131,12 +132,22 @@ if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
         .setColor('#FFD69D')
         .addField("Discord", "https://discord.gg/jcKySm5")
-        .setFooter("Bot Programmé par Nathsuu")
+        .setFooter("Bot Programmé par Lawzenn")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
     
   }
-});
+}); 
+// Create an event listener for new guild members
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'bienvenue');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`👋 Wow Bienvenue sur le serveur !,${member}`);
 
+});
+ 
 bot.login(process.env.BOTLAWZENN_TOKEN);
