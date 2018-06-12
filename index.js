@@ -1,7 +1,7 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
-const bot = new Discord.Client();
+const client = new Discord.Client();
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
 let xp = require("./xp.json");
@@ -139,15 +139,5 @@ if (message.content === prefix + "discord"){
     
   }
 }); 
-// Create an event listener for new guild members
-client.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'bienvenue');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`👋 Wow Bienvenue sur le serveur !,${member}`);
-
-});
  
 bot.login(process.env.BOTLAWZENN_TOKEN);
