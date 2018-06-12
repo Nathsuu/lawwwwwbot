@@ -109,7 +109,7 @@ bot.on("message", async message => {
           .addField("💡 Aide: Liste des commandes - ", "  **-/commande : Affiche les commandes du bot !**\n-**/ban ➜ Utilise: /ban <pseudo> <raison>**\n-**/tempban ➜ Utilise: /tempban <pseudo> <raison>** (SOON)\n-**/kick ➜ Utilise: /kick <pseudo> <raison>**\n-**/mute ➜ @pseudo (SOON) **\n-**/tempmute ➜ @pseudo (SOON)**")
           .addField("Interaction - ", "  -/ping le bot te repond pong !\n-/salut le bot te repond ça va ?")
           .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
-          .setFooter("Bot Programmé par Lawzenn")
+          .setFooter("Bot Programmé par Nathsuu")
       message.channel.sendEmbed(help_embed);
       //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
       console.log("Commande Help demandé !");
@@ -120,7 +120,7 @@ bot.on("message", async message => {
         .setColor('#FFD69D')
         .addField("Commande Staff", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
         .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
-        .setFooter("Bot Programmé par Lawzenn")
+        .setFooter("Bot Programmé par Nathsuu")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
@@ -131,7 +131,7 @@ if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
         .setColor('#FFD69D')
         .addField("Discord", "https://discord.gg/jcKySm5")
-        .setFooter("Bot Programmé par Lawzenn")
+        .setFooter("Bot Programmé par Nathsuu")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
