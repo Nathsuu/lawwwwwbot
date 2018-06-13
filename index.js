@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setGame('s!help' + bot.guilds.size.toString() + 'https://www.twitch.tv/gotaga%27');
+  bot.user.setActivity('s!help | Sur' + bot.guilds.size.toString() + 'serveurs');
 });
 
 bot.on("message", async message => {
