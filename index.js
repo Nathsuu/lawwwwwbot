@@ -107,7 +107,7 @@ bot.on("message", async message => {
       var help_embed = new Discord.RichEmbed()
           .setColor('#00aeff')
           .addField("💡 Aide: **Liste des commandes** -")
-          .addField("**🔨 Voici les commandes pour les administrateur :** - ", "/ban Utilise : /ban <pseudo> \n Cette commande permet de bannir n'importe quels membres.\n/kick Utilise : /kick <pseudo> Cette commande permet d'exclure un memebre sans le bannir.\n/warn Utilise: /warn <pseudo> Cette commande permet d'avertir un membre au bout de 2 warns il seras kick et au bout de 3 warns il sera bannie.\n/say Utilise: /say <message> Cette commande permet de dire ce que tu souhaite mais le bot le feras a ta place !\n/mute Utilise: /mute <pseudo> Commande :🔜")
+          .addField("**🔨 Voici les commandes pour les administrateur :** - ", "/ban Utilise : `/ban <pseudo>` \n Cette commande permet de bannir n'importe quels membres.\n/kick Utilise : `/kick <pseudo>` Cette commande permet d'exclure un memebre sans le bannir.\n/warn Utilise: `/warn <pseudo>` Cette commande permet d'avertir un membre au bout de 2 warns il seras kick et au bout de 3 warns il sera bannie.\n/say Utilise: `/say <message>` Cette commande permet de dire ce que tu souhaite mais le bot le feras a ta place !\n/mute Utilise: `/mute <pseudo>` Commande :🔜")
           .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
           .setFooter("Bot Programmé par Nathsuu ✔️")
       message.channel.sendEmbed(help_embed);
