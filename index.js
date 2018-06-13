@@ -27,7 +27,7 @@ bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setGame('s!help', 'https://www.twitch.tv/gotaga');
-  bot.user.setGame('s!help' + bot.guilds.length.toString() + ' servers!', ''https://www.twitch.tv/gotaga');
+  bot.user.setGame('s!help' + bot.guilds.length.toString() + ' servers!', 'https://www.twitch.tv/gotaga');
 });
 
 bot.on("message", async message => {
