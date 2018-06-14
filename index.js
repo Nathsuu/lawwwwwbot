@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity('s!help | Sur '  + bot.guilds.size.toString() +  ' serveurs!');
+  bot.user.setActivity('s!help | Sur ' + bot.guilds.size.toString() + ' serveurs!');
 });
 
 bot.on("message", async message => {
