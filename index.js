@@ -11,7 +11,7 @@ bot.on('ready', () => {
   setInterval(function(){
     guilds = ["Vaction | v!help", "Vaction | v!help | French Bot", "Vaction | by WinDino#3781", `Vaction | ${bot.guilds.size} Serveurs`, "Vaction | v!help", `Vaction | ${bot.users.size} Utilisateurs`]
     lecture = Math.floor((Math.random() * guilds.length));
-    client.user.setPresence({
+    bot.user.setPresence({
       game:{
         name: `${guilds[lecture]}`, 
         type: 3
