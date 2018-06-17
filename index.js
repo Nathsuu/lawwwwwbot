@@ -23,21 +23,6 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-
-bot.on('ready', () => {
-  setInterval(function(){
-    guilds = ["Vaction | v!help", "Vaction | v!help | French Bot", "Vaction | by WinDino#3781", `Vaction | ${client.guilds.size} Serveurs`, "Vaction | v!help", `Vaction | ${client.users.size} Utilisateurs`]
-    lecture = Math.floor((Math.random() * guilds.length));
-    client.user.setPresence({
-      game:{
-        name: `${guilds[lecture]}`, 
-        type: 3
-      }
-    });
-  }, 80000);  
-	
-});
-
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
@@ -143,6 +128,20 @@ if (message.content.startsWith(prefix + "hack")) {
 
   return;
   }
+	
+bot.on('ready', () => {
+  setInterval(function(){
+    guilds = ["Vaction | v!help", "Vaction | v!help | French Bot", "Vaction | by WinDino#3781", `Vaction | ${client.guilds.size} Serveurs`, "Vaction | v!help", `Vaction | ${client.users.size} Utilisateurs`]
+    lecture = Math.floor((Math.random() * guilds.length));
+    client.user.setPresence({
+      game:{
+        name: `${guilds[lecture]}`, 
+        type: 3
+      }
+    });
+  }, 80000);  
+	
+});
   
 if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
