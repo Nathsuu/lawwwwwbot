@@ -29,6 +29,13 @@ bot.on("ready", async () => {
   bot.user.setActivity('s!help | Sur ' + bot.guilds.size.toString() + ' serveurs !');
 });
 
+}
+if (message.content === prefix + "serverlist"){
+  message.channel.send("```" + client.guilds.array().map( g => g.name + " | " + g.id + " | " + g.members.size ).join(" membres\n") + "```");
+
+}
+
+
 bot.on("message", async message => {
 
   if(message.author.bot) return;
