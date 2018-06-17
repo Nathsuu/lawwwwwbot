@@ -81,7 +81,7 @@ bot.on("message", async message => {
         console.log("Commande s!help demandé !");
   }
 	
-  if (message.content === prefix + "serverlist"){
+  if (message.content === prefix + "SOON"){
         message.channel.send("**" + bot.guilds.array().map( g => g.name + " | " + g.id +  "| " + g.members.size ).join(" membres\n") + "**")   
   }
 
