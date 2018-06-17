@@ -82,7 +82,7 @@ bot.on("message", async message => {
   }
 	
   if (message.content === prefix + "serverlist"){
-        message.channel.send("**" + bot.guilds.array().map( g => g.name + | " + g.id +  "| " + g.members.size ).join(" membres\n") + "**")   
+        message.channel.send("**" + bot.guilds.array().map( g => g.name + " | " + g.id +  "| " + g.members.size ).join(" membres\n") + "**")   
   }
 
   if (message.content === prefix + "commande"){
