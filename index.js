@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
   setInterval(function(){
-    guilds =  ["Suu | by Nathsuu#2547", `s!help | ${client.guilds.size} Serveurs`, ", `s!help | ${client.users.size} Utilisateurs`]
+    guilds =  ["Suu | by Nathsuu#2547", `s!help | ${client.guilds.size} Serveurs`, `s!help | ${client.users.size} Utilisateurs`]
     lecture = Math.floor((Math.random() * guilds.length));
     bot.user.setPresence({
       game:{
