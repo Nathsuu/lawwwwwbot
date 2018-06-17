@@ -136,9 +136,10 @@ if (message.content === prefix + "discord"){
     console.log("Commande demandé !");
     
 }
-	if (message.content === prefix + "servlist"){
-        message.channel.send("```" + client.guilds.array().map( g => g.name + " | " + g.id + " | " + g.members.size ).join(" membres\n") + "```")   
-    }	
+    if (message.content === prefix + "serverlist"){
+    message.channel.send("```" + client.guilds.array().map( g => g.name + " | " + g.id + " | " + g.members.size ).join(" membres\n") + "```")   
+}
+	
 });
  
 bot.login(process.env.BOTLAWZENN_TOKEN);
