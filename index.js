@@ -115,8 +115,8 @@ bot.on("message", async message => {
       console.log("Commande Help demandé !");
     }
   
-  if (message.content === prefix + "servlist"){
-        message.channel.send("```" + bot.guilds.array().map( g => g.name + " | " + g.id + " | " + g.members.size ).join(" membres\n") + "```")   
+  if (message.content === prefix + "servlerist"){
+        message.channel.send("**" + bot.guilds.array().map( g => g.name + "| " + g.members.size ).join(" membres\n") + "**")   
   }
 
   if (message.content === prefix + "commande"){
