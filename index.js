@@ -154,7 +154,7 @@ if (message.content.startsWith(prefix + "hack")) {
         }) 	    
 	message.channel.send('**__[HACKING]__** **MODIFICATION DU DISCORD.....**')
 	message.channel.send('**__[HACKING]__** **.........................**')
-	message.channel.send('**__[HACKING]__** **LANCEMENT DE VAC.EXE**')
+	message.channel.send('**__[HACKING]__** **LANCEMENT DE SUU.EXE**')
 	message.channel.send('**__[HACKING]__** **60%**')
 	message.channel.send('**__[HACKING]__** **70%**')
 	message.channel.send('**__[HACKING]__** **80%**')
@@ -167,7 +167,7 @@ if (message.content.startsWith(prefix + "hack")) {
         message.channel.send('**:x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning:**')
         message.channel.send('**:x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning: :x: :warning:**')   
         message.delete()	  
-        console.log("Commande v!fakehacker demandé !");	  	  	  
+        console.log("Commande s!hack demandé !");	  	  	  
 
   return;
   }
