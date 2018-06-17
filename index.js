@@ -23,12 +23,25 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
+
+client.on('ready', () => {
+  setInterval(function(){
+    guilds = ["Vaction | v!help", "Vaction | v!help | French Bot", "Vaction | by WinDino#3781", `Vaction | ${client.guilds.size} Serveurs`, "Vaction | v!help", `Vaction | ${client.users.size} Utilisateurs`]
+    lecture = Math.floor((Math.random() * guilds.length));
+    client.user.setPresence({
+      game:{
+        name: `${guilds[lecture]}`, 
+        type: 3
+      }
+    });
+  }, 80000);  
+	
+});
+
 bot.on("ready", async () => {
 
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("s!help | Sur ${client.guilds.size} + ${client.users.size} Utilisateurs  !");
 });
-
 
 bot.on("message", async message => {
 
