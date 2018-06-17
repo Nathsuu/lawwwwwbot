@@ -103,18 +103,30 @@ bot.on("message", async message => {
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
   
-  if (message.content === prefix + "help"){
-      var help_embed = new Discord.RichEmbed()
-          .setColor('#00aeff')
-          .addField("💡 Aide: Liste des commandes-")
-          .addField("**🔨 Voici les commandes pour les administrateurs :** - ", "**/ban Utilise : `/ban <pseudo>` \n Cette commande permet de bannir n'importe quels membres.\n/kick Utilise : `/kick <pseudo>` Cette commande permet d'exclure un memebre sans le bannir.\n/warn Utilise: `/warn <pseudo>` Cette commande permet d'avertir un membre au bout de 2 warns il seras kick et au bout de 3 warns il sera bannie.\n/say Utilise: `/say <message>` Cette commande permet de dire ce que tu souhaite mais le bot le feras a ta place !\n/mute Utilise: `/mute <pseudo>` Commande :🔜**")
-          .addField("Information - ", "  -/discord\n-/support\n-/version\n-/language")
-          .setFooter("Bot Programmé par Nathsuu ✔️")
-      message.channel.sendEmbed(help_embed);
-      //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
-      console.log("Commande Help demandé !");
-    }
-  
+  if (message.content === prefix + "help"){	    
+        var help_embed = new Discord.RichEmbed()
+        .setColor('c7f3ff')
+	.addField("Suu", ":notepad_spiral: Voici la liste de mes commandes :")
+	.addBlankField()	
+        .addField(":hammer_pick: Espaces Modérations", "```s!clear \ns!ban \ns!kick \ns!mute \ns!unmute \ns!tempmute \ns!warn```", true)	
+        .addField(":space_invader: Espaces Fun", "```\ns!hack```", true)	
+        .addField("💋 Espaces Nsfw", "```v!e-girl \nv!ass \nv!boobs```", true)
+	.addBlankField()	
+	.addField(":frame_photo: Espaces Images", "```s!Suu```", true)	
+        .addField(":clipboard: Espaces Utiles", "```s!help \ns!stats \ns!bot \ns!invite \ns!serverlist \ns!ping```", true)
+        .addField(":gear: Espaces Créateurs", "```\ns!say```", true)
+	.addBlankField()
+	.addField(":sparkles: News", "```SOON *```", true)	
+	.addBlankField()	
+        .addField(":notepad_spiral: Support", "[[Support]](https://discord.gg/sRNPDjU)", true)
+        .addField(":paperclip: Invitation du Bot", "[[Invitation]](https://discordapp.com/oauth2/authorize?client_id=452873410373222401&permissions=2146958583&scope=bot)", true)
+	.addBlankField()	
+        .setFooter("Bot programmé par Nathsuu ✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
+	.setTimestamp() 
+    message.channel.sendEmbed(help_embed)
+        console.log("Commande s!help demandé !");
+  }
+	
   if (message.content === prefix + "serverlist"){
         message.channel.send("**" + bot.guilds.array().map( g => g.name + "| " + g.members.size ).join(" membres\n") + "**")   
   }
