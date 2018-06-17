@@ -134,12 +134,7 @@ if (message.content === prefix + "discord"){
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
-    
-}
-    if (message.content === prefix + "serverlist"){
-    message.channel.send("```" + client.guilds.array().map( g => g.name + " | " + g.id + " | " + g.members.size ).join(" membres\n") + "```")   
-}
-	
+}	
 });
  
 bot.login(process.env.BOTLAWZENN_TOKEN);
