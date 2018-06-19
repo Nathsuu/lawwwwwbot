@@ -62,7 +62,7 @@ bot.on("message", async message => {
         .setColor('c7f3ff')
 	.addField("Suu", ":notepad_spiral: Voici la liste de mes commandes :")
 	.addBlankField()	
-        .addField(":hammer_pick: Espaces Modérations", "```s!clear \ns!ban \ns!kick \ns!mute \ns!unmute \ns!tempmute \ns!warn```", true)	
+        .addField(":hammer_pick: Espaces Modérations", "```s!clear \ns!ban \ns!kick \ns!mute SOON* \ns!unmute SOON* \ns!tempmute SOON * \ns!warn```", true)	
         .addField(":space_invader: Espaces Fun", "```\nDes commandes son a venir !```", true)	
         .addField("💋 Espaces Nsfw", "```s!e-girl \ns!ass \ns!boobs```", true)
 	.addBlankField()	
