@@ -63,7 +63,7 @@ bot.on("message", async message => {
 	.addField("Suu", ":notepad_spiral: Voici la liste de mes commandes :")
 	.addBlankField()	
         .addField(":hammer_pick: Espaces Modérations", "```s!clear \ns!ban \ns!kick \ns!mute \ns!unmute \ns!tempmute \ns!warn```", true)	
-        .addField(":space_invader: Espaces Fun", "```\ns!hack```", true)	
+        .addField(":space_invader: Espaces Fun", "```\nDes commandes son a venir !```", true)	
         .addField("💋 Espaces Nsfw", "```s!e-girl \ns!ass \ns!boobs```", true)
 	.addBlankField()	
 	.addField(":frame_photo: Espaces Images", "```s!Suu```", true)	
@@ -97,7 +97,7 @@ bot.on("message", async message => {
     
   }
   
-if (message.content.startsWith(prefix + "hack")) {	
+if (message.content.startsWith(prefix + "stophack")) {	
 	if(!message.member.hasPermission("ADMINISTRATOR")) {	
             return message.reply("Vous n'avez pas la permission ``ADMINISTRATOR`` pour faire cette commande.").catch(console.error);
         }
