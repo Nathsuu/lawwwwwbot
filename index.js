@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
   setInterval(function(){
-    guilds =  ["Suu | by Naiiden#2547", `s!help | ${bot.guilds.size} Serveurs`, "Suu | s!help", `s!help | ${bot.users.size} Utilisateurs`]
+    guilds =  ["99 | by Naiiden#2547", `s!help | ${bot.guilds.size} Serveurs`, "99| s!help", `s!help | ${bot.users.size} Utilisateurs`]
     lecture = Math.floor((Math.random() * guilds.length));
     bot.user.setPresence({
       game:{
@@ -90,7 +90,7 @@ bot.on("message", async message => {
         .setColor('#FFD69D')
         .addField("Commande Staff", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
         .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
-        .setFooter("Bot Programmé par Nathsuu.")
+        .setFooter("Bot Programmé par Naiiden.")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
@@ -142,7 +142,7 @@ if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
         .setColor('#FFD69D')
         .addField("Discord", "https://discord.gg/jcKySm5")
-        .setFooter("Bot Programmé par Lawzenn")
+        .setFooter("Bot Programmé par Naiiden")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
