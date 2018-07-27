@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
   setInterval(function(){
-    guilds =  ["Suu | by Naysap#2547", `s!help | ${bot.guilds.size} Serveurs`, "Suu | s!help", `s!help | ${bot.users.size} Utilisateurs`]
+    guilds =  ["Suu | by Naiiden#2547", `s!help | ${bot.guilds.size} Serveurs`, "Suu | s!help", `s!help | ${bot.users.size} Utilisateurs`]
     lecture = Math.floor((Math.random() * guilds.length));
     bot.user.setPresence({
       game:{
@@ -75,7 +75,7 @@ bot.on("message", async message => {
         .addField(":postbox: Support", "[[Support]](https://discord.gg/sRNPDjU)", true)
         .addField(":package: Invitation du Bot", "[[Invitation]](https://discordapp.com/oauth2/authorize?client_id=452873410373222401&permissions=2146958583&scope=bot)", true)
 	.addBlankField()	
-        .setFooter("Bot programmé par Nathsuu ✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
+        .setFooter("Bot programmé par Naiiden ✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
 	.setTimestamp() 
     message.channel.sendEmbed(help_embed)
         console.log("Commande s!help demandé !");
