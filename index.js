@@ -60,7 +60,7 @@ bot.on("message", async message => {
   if (message.content === prefix + "help"){	    
         var help_embed = new Discord.RichEmbed()
         .setColor('c7f3ff')
-	.addField("Suu", ":notepad_spiral: Voici la liste de mes commandes :")
+	.addField("INSID3", ":notepad_spiral: Voici la liste de mes commandes :")
 	.addBlankField()	
         .addField(":hammer_pick: Espaces Modérations", "```s!clear \ns!ban \ns!kick \ns!mute SOON* \ns!unmute SOON* \ns!tempmute SOON * \ns!warn```", true)	
         .addField(":space_invader: Espaces Fun", "```\nDes commandes son a venir !```", true)	
