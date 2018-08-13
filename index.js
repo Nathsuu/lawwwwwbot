@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
   setInterval(function(){
-    guilds =  ["INSID3 | by Tibo #2547", `s!help | ${bot.guilds.size} Serveurs`, "INSID3| s!help", `s!help | ${bot.users.size} Utilisateurs`]
+    guilds =  ["INSID3 | by Tibo 👀#2547", `s!help | ${bot.guilds.size} Serveurs`, "INSID3| s!help", `s!help | ${bot.users.size} Utilisateurs`]
     lecture = Math.floor((Math.random() * guilds.length));
     bot.user.setPresence({
       game:{
@@ -75,7 +75,7 @@ bot.on("message", async message => {
         .addField(":postbox: Support", "[[Support]](https://discord.gg/sRNPDjU)", true)
         .addField(":package: Invitation du Bot", "[[Invitation]](https://discordapp.com/oauth2/authorize?client_id=452873410373222401&permissions=2146958583&scope=bot)", true)
 	.addBlankField()	
-        .setFooter("Bot programmé par Tibo  ✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
+        .setFooter("Bot programmé par Tibo 👀✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
 	.setTimestamp() 
     message.channel.sendEmbed(help_embed)
         console.log("Commande s!help demandé !");
@@ -142,7 +142,7 @@ if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
         .setColor('#FFD69D')
         .addField("Discord", "https://discord.gg/XVgXu39")
-        .setFooter("Bot Programmé par Tibo ")
+        .setFooter("Bot Programmé par Tibo 👀 ")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
