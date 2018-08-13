@@ -9,7 +9,7 @@ bot.commands = new Discord.Collection();
 
 bot.on('ready', () => {
   setInterval(function(){
-    guilds =  ["99 | by Naiiden#2547", `s!help | ${bot.guilds.size} Serveurs`, "99| s!help", `s!help | ${bot.users.size} Utilisateurs`]
+    guilds =  ["INSID3 | by Tibo #2547", `s!help | ${bot.guilds.size} Serveurs`, "INSID3| s!help", `s!help | ${bot.users.size} Utilisateurs`]
     lecture = Math.floor((Math.random() * guilds.length));
     bot.user.setPresence({
       game:{
@@ -75,7 +75,7 @@ bot.on("message", async message => {
         .addField(":postbox: Support", "[[Support]](https://discord.gg/sRNPDjU)", true)
         .addField(":package: Invitation du Bot", "[[Invitation]](https://discordapp.com/oauth2/authorize?client_id=452873410373222401&permissions=2146958583&scope=bot)", true)
 	.addBlankField()	
-        .setFooter("Bot programmé par Naiiden ✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
+        .setFooter("Bot programmé par Tibo  ✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
 	.setTimestamp() 
     message.channel.sendEmbed(help_embed)
         console.log("Commande s!help demandé !");
@@ -90,7 +90,7 @@ bot.on("message", async message => {
         .setColor('#FFD69D')
         .addField("Commande Staff", " `/ban\n/kick\n/report\n/clear (message) (max 100)\n/serverinfo`")
         .addField("Economie", " `/coins\n/level\n/pay (nombre de coins)\n/say (message)`")
-        .setFooter("Bot Programmé par Naiiden.")
+        .setFooter("Bot Programmé par Tibo .")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
@@ -141,8 +141,8 @@ if (message.content.startsWith(prefix + "stophack")) {
 if (message.content === prefix + "discord"){
     var help_embed = new Discord.RichEmbed()
         .setColor('#FFD69D')
-        .addField("Discord", "https://discord.gg/jcKySm5")
-        .setFooter("Bot Programmé par Naiiden")
+        .addField("Discord", "https://discord.gg/XVgXu39")
+        .setFooter("Bot Programmé par Tibo ")
     message.channel.sendEmbed(help_embed);
     //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
     console.log("Commande demandé !");
