@@ -75,7 +75,7 @@ bot.on("message", async message => {
         .addField(":postbox: Support", "[[Support]](https://discord.gg/sRNPDjU)", true)
         .addField(":package: Invitation du Bot", "[[Invitation]](https://discordapp.com/oauth2/authorize?client_id=452873410373222401&permissions=2146958583&scope=bot)", true)
 	.addBlankField()	
-        .setFooter("Bot programmé par Tibo 👀✔️ | Demandé par" + message.author.tag, message.author.displayAvatarURL)
+        .setFooter("Bot programmé par FrenchxSenpai ツ#9010 | Demandé par" + message.author.tag, message.author.displayAvatarURL)
 	.setTimestamp() 
     message.channel.sendEmbed(help_embed)
         console.log("Commande s!help demandé !");
